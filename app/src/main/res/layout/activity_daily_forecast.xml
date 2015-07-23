@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              tools:context="janel.stormy.user_interface.DailyForecastActivity"
+              android:background="@drawable/bg_gradient">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/this_weeks_weather"
+        android:id="@+id/thisWeekLabel"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/thisWeekLabel"
+        android:layout_above="@+id/locationLabelDaily"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@android:id/list"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:id="@android:id/empty"
+            android:text="@string/noDailyForecastData"
+            android:textColor="#FFFFFFFF"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/locationLabelDaily"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18sp"
+        tools:text="TEST"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="8dp"/>
+</RelativeLayout>
